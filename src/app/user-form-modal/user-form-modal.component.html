@@ -1,0 +1,4 @@
+<div class="modal" *ngIf="isOpen">
+    <app-user-form [userToEdit]="user"></app-user-form>
+    <button (click)="close()">Close</button>
+</div>

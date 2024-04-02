@@ -1,0 +1,15 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div *ngFor="let req of reqs ; let id = index ">
+        <label [for]="req.fetchName">{{req.showName}} : </label>
+        <input [type]="req.fetchName == 'age' ? 'number' : 'text'" [placeholder]="req.showName" [formControlName]="req.fetchName" />
+        <div *ngIf="userForm.get(req.fetchName)?.errors && userForm.get(req.fetchName)?.touched"
+            id="warnDiv">
+            Note : 
+            <ul>
+                <li *ngFor="let err of req.errors">{{err}}</li>
+            </ul>
+        </div>
+    </div>
+
+    <button type="submit" [disabled]="!userForm.valid">+</button>
+</form>

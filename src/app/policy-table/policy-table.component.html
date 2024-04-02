@@ -1,0 +1,28 @@
+
+<table>
+    <thead>
+        <h2>User Policy Data</h2>
+        <tr>
+            <td *ngFor="let req of policyReqs">
+                <span>{{req.showName}}</span>
+            </td>
+            <td>Policy Max Amount</td>
+            <td>Balance Left</td>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let policy of calculatedPolicyData">
+            <td *ngFor="let req of policyReqs">
+                <span>{{policy[req.fetchName]}} </span>
+            </td>
+            <td>
+                {{policy['pma'] | currency : 'INR'}}
+            </td>
+
+            <td>
+                {{policy['bl'] | currency : 'INR'}}
+            </td>
+        </tr>
+    </tbody>
+</table>

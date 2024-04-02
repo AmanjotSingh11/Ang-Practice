@@ -1,0 +1,36 @@
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  thead > tr {
+    background-color: #333; 
+    color: white; 
+  }
+  
+  thead > h2 {
+    width : fit-content;
+  }
+
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd; 
+  }
+  
+  tbody tr:hover {
+    background-color: rgba(245, 245, 245 , 0.7); 
+    color : black;
+  }
+  
+  button {
+    padding: 8px;
+    margin-right: 5px;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+  
+  /* Additional styles for your modal can be added here */
+  

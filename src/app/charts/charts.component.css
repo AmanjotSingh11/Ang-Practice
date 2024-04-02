@@ -1,0 +1,11 @@
+canvas{
+    background-color: #faebd7;
+}
+
+div{
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 75dvh;
+}
